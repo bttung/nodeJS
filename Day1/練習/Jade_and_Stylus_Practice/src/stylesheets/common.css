@@ -1,0 +1,318 @@
+@charset "UTF-8";
+
+/* ========BASIC======== */
+html {
+   overflow-y:scroll;
+}
+
+body {
+   margin:0;
+   padding:0;
+   line-height:1.6;
+   letter-spacing:1px;
+   font-family:Verdana, Helvetica, sans-serif;
+   font-size:13px;
+   color:#333;
+   background:#EFEFEF;
+}
+
+h1,h2,h3,h4,h5,h6 {
+   margin:0;
+   padding:0;
+   font-weight:normal;
+}
+
+p {
+   margin:0 0 1em 0;
+   padding:0;
+}
+
+br {
+   letter-spacing:normal;
+}
+
+img {
+   border:0;
+}
+
+a {
+   color:#5A5D00;
+   text-decoration:none;
+}
+
+a:hover {
+   color:#7B8200;
+   border-bottom:1px solid #7B8200;
+}
+
+dl,ol,ul {
+   margin:0 0 1em 0;
+   padding:0;
+}
+
+li {
+   margin:0 0 0 40px;
+   padding:0;
+}
+
+em {
+   font-style:normal;
+   background:#ff0;
+}
+
+
+/* ========TEMPLATE WIREFRAME======== */
+#top {
+   width:800px;
+   margin:20px auto;
+   padding:10px;
+   background:#fff;
+}
+
+#header {
+   width:800px;
+   position:relative;
+   background:#313431;
+}
+
+#header h1 a {
+   color:#fff;
+}
+
+#header h1 a:hover {
+   color:#ddd;
+   border-bottom:none;
+}
+
+#navi {
+   position:absolute;
+   top:20px;
+   right:0;
+}
+
+#icatch {
+   margin:5px 0;
+}
+
+#menu {
+   float:left;
+   width:800px;
+   margin:0 0 20px 0;
+   background:#7B8200;
+}
+
+#menu:hover {
+   background:#A4AC1E;
+}
+
+#contents {
+   width:800px;
+   clear:both;
+   float:left;
+}
+
+#main {
+   float:left;
+   width:500px;
+}
+
+#sub {
+   float:right;
+   width:280px;
+   padding:5px;
+   background:#EBE9EB;
+}
+#totop {
+   clear:both;
+}
+
+#footer {
+   width:800px;
+   clear:both;
+   padding:10px 0;
+}
+
+
+/* ========HEADER CUSTOMIZE======== */
+#header h1 {
+   padding:20px 10px 0 20px;
+   font-weight:bold;
+   font-size:24px;
+   color:#fff;
+}
+
+#header p {
+   margin:0;
+   padding:0 10px 10px 20px;
+   color:#AAAAAA;
+}
+
+
+/* ========MENU CUSTOMIZE======== */
+#menu ul {
+   list-style:none;
+   margin:0;
+   padding:0;
+}
+#menu li {
+   float:left;
+   margin:0;
+   padding:0;
+}
+#menu li a {
+   display:block;
+   padding:8px 20px;
+   color:#fff;
+}
+
+#menu li a:hover {
+   color:#fff;
+   background:#5A5D00 ;
+   border:none;
+}
+
+#menu .current {
+   background-color:#5A5D00;
+   color:#fff;
+}
+
+
+/* ========MAIN CUSTOMIZE======== */
+#main h2 {
+   margin-bottom:10px;
+   padding:10px 0;
+   font-weight:bold;
+   font-size:16px;
+   border-bottom:2px solid #ddd;
+}
+
+#main h3 {
+   margin-bottom:2px;
+   padding:2px 0 2px 10px;
+   font-weight:bold;
+   font-size:15px;
+   line-height:1.2;
+   border-left:5px solid #333;
+}
+
+#main h4 {
+   margin-bottom:2px;
+   font-weight:bold;
+   font-size:14px;
+   border-bottom:2px solid #666;
+}
+
+#main h5 {
+   margin-bottom:2px;
+   padding:2px 5px;
+   font-weight:bold;
+   font-size:13px;
+   background:#ececec;
+}
+
+#main h6 {
+   font-weight:bold;
+   font-size:13px;
+}
+
+#main dl {
+   margin:0;
+   padding:0;
+}
+
+#main dt {
+   text-decoration:underline;
+}
+
+#main dd {
+   margin:0 0 1em 1em;
+}
+
+#main table {
+   width:100%;
+   border-collapse: collapse;
+}
+
+#main table th {
+   padding:5px;
+   font-size:12px;
+   color:#fff;
+   text-align:left;
+   border:1px solid #ddd;
+   background:#3C3C3C;
+}
+
+#main table td {
+   padding:5px;
+   font-size:12px;
+   text-align:left;
+   border:1px solid #ddd;
+}
+
+
+/* ========SUB CUSTOMIZE======== */
+#sub h2 {
+   padding:2px 5px;
+   font-size:14px;
+   color:#fff;
+   background:#3C3C3C;
+}
+
+#sub ul {
+   margin:5px 0 0 0;
+   padding:0;
+   list-style:none;
+}
+
+#sub li {
+   margin:0 0 0 5px;
+   padding-left:10px;
+   border-bottom:1px solid #fff;
+   line-height:2;
+   background:url(../images/bg_list.gif) 0 50% no-repeat;
+}
+
+
+/* ========PAGETOP CUSTOMIZE========= */
+#pageTop {
+   padding:10px 0;
+   text-align:right;
+}
+
+#pageTop a {
+   padding:0 0 0 12px;
+   background:url(../images/bg_pagetop.gif) 0 60% no-repeat;
+}
+
+
+#footMenu {
+   position: relative;
+   overflow: hidden;
+   padding:20px 0 0 0;
+   border-top:1px solid #CECFCE;
+}
+
+#footMenu ul {
+   position:relative;
+   left:50%;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+}
+
+#footMenu li {
+   position:relative;
+   left:-50%;
+   float:left;
+   margin:0 30px 0 0;
+   padding:0;
+}
+
+
+/* ========FOOTER CUSTOMIZE======== */
+.copyright {
+   text-align:center;
+   font-size:11px;
+   padding:20px 0;
+}

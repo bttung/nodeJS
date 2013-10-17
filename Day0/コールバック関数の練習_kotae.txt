@@ -1,0 +1,75 @@
+/* 第1問 */
+function test(msg, callback) {
+  console.log(msg);
+  callback();
+}
+
+
+/* 第2問 */
+function test2(msg, callback) {
+  console.log(msg);
+  callback('Goodbye');
+}
+
+
+/* 第3問 */
+function test3(msg, callback) {
+  callback(msg);
+  callback('Goodbye');
+}
+
+
+/* 第4問 */
+function test4(callback) {
+  callback(function(msg) {
+    console.log(msg);
+  });
+  // callback(console.log); でもOK
+}
+
+
+/* 第5問 */
+function test4(callback) { // 1 test4
+  callback(function(msg) { // 2 callbackに渡している関数
+    console.log(msg);
+  });
+}
+
+function test5(cb) {       // 3 test5
+  cb('Hello');
+}
+
+test4(function(cb) {       // 4 test4に渡している関数
+  test5(function(m) {      // 5 test5に渡している関数
+    console.log('Goodbye');
+    cb(m);
+  });
+});
+
+と関数に番号を振っておくと、
+1, 4, 3, 5, 2 の順番で呼び出されている
+5番呼び出し時に Goodbye が表示され、2番呼び出し時に Hello が表示される。
+
+
+/* 第6問 */
+var fs = require('fs');
+function filewrite(path, callback) {
+  var ws = fs.createWriteStream(path);
+  callback(ws);
+  ws.end();
+}
+
+
+/* 第6問ex 非同期対応版 */
+var fs = require('fs');
+function filewrite(path, callback) {
+  var ws = fs.createWriteStream(path);
+  callback(ws, function() {
+    ws.end();
+  })
+}
+
+filewrite2('sample.txt', function(ws, done) {
+  ws.write('Hello2\n');
+  done();
+});

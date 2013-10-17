@@ -1,0 +1,75 @@
+/* 第1問 */
+test('Hello', function() {
+  console.log('Goodbye');
+});
+
+
+
+と実行すると
+Hello
+Goodbye
+と表示するtest関数を定義しなさい。
+
+
+
+/* 第2問 */
+test2('Hello', function(msg) {
+  console.log(msg);
+});
+
+と実行すると
+Hello
+Goodbye
+と表示するtest2関数を定義しなさい。
+
+
+
+/* 第3問 */
+test3('Hello', function(msg) {
+  console.log(msg);
+});
+
+と実行すると
+Hello
+Goodbye
+と表示するtest3関数を定義しなさい。
+ただしtest3の中でconsole.log()を使用してはいけません。
+
+
+
+/* 第4問 */
+function test5(cb) {
+  cb('Hello');
+}
+
+test4(function(cb) {
+  test5(cb);
+});
+
+と実行すると
+Hello
+と表示するtest4関数を定義しなさい。
+
+
+
+/* 第5問 */
+test4(function(cb) {
+  test5(function(m) {
+    console.log('Goodbye');
+    cb(m);
+  });
+});
+
+とした場合の挙動を説明しなさい。
+
+
+/* 第6問 */
+filewrite('sample.txt', function(ws) {
+  ws.write('Hello\n');
+});
+
+と実行すると
+Hello が書きこまれたsample.txtというファイルが生成されるような、filewrite関数を定義しなさい。。
+なお、wsはfs.createWriteStreamの戻り値で、
+ファイル書き込み後にはきちんと end() メソッドを実行してください。
+
